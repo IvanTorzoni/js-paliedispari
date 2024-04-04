@@ -45,11 +45,12 @@ if (userRequest !== "") {
 
     // Creo il ciclo for per confrontare le lettere presenti nei due array
     for (let i = 0; i < wordArray.length; i++) {
+        palindrome(wordArray[i], wordReverseArray[i])
         // Se gli elementi dell'array word sono diversi da quelli dell'array reverse
-        if (wordArray[i] !== wordReverseArray[i]) {
-            // porta la variabile flag da false a true
-            result = true
-        }
+        // if (wordArray[i] !== wordReverseArray[i]) {
+        //     // porta la variabile flag da false a true
+        //     result = true
+        // }
     }
     console.log(result);
 
