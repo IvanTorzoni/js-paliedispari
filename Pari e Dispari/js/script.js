@@ -18,7 +18,7 @@ console.log(`La scelta del tuo numero è:`, userNum);
 // Se il numero inserito è un valore numerico e
 // Se i numeri inseriti sono compresi tra il range di 1 e 5 allora
 // Eseguo il codice...
-if (userOdds !== "" && userOdds === "pari" && userOdds === "dispari" && isNaN(userNum) === false && userNum >= 1 && userNum <= 5) {
+if (userOdds !== "" && isNaN(userNum) === false && userNum >= 1 && userNum <= 5 && userOdds === "pari" || userOdds === "dispari") {
 
     //Dichiaro una variabile e richiamo la funzione "randomCpuNum" per la generazione di un numero casuale della CPU
     let random = randomCpuNum()
@@ -54,4 +54,3 @@ if (userOdds !== "" && userOdds === "pari" && userOdds === "dispari" && isNaN(us
 } else {
     alert("E' stata inserita una parola o un valore diverso dalla richiesta fatta")
 }
-
