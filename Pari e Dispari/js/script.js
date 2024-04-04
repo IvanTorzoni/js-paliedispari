@@ -11,3 +11,6 @@ console.log(`La tua scelta tra pari e dispari è:`, userOdds);
 // Richiesta all' utente di scegliere un numero compreso te 1 e 5
 const userNum = parseInt(prompt("dimmi un numero da 1 a 5"));
 console.log(`La scelta del tuo numero è:`, userNum);
+
+//Dichiaro una variabile e richiamo la funzione "randomCpuNum" per la generazione di un numero casuale della CPU
+let random = randomCpuNum()
