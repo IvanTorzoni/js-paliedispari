@@ -14,3 +14,7 @@ console.log(`La scelta del tuo numero è:`, userNum);
 
 //Dichiaro una variabile e richiamo la funzione "randomCpuNum" per la generazione di un numero casuale della CPU
 let random = randomCpuNum()
+
+// Somma tra il numero utente e quello della CPU
+let sum = random + userNum
+console.log(`Il risultato numerico tra la somma dei due numeri è di:`, sum);
