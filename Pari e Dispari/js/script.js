@@ -12,32 +12,46 @@ console.log(`La tua scelta tra pari e dispari è:`, userOdds);
 const userNum = parseInt(prompt("dimmi un numero da 1 a 5"));
 console.log(`La scelta del tuo numero è:`, userNum);
 
-//Dichiaro una variabile e richiamo la funzione "randomCpuNum" per la generazione di un numero casuale della CPU
-let random = randomCpuNum()
+// Impostiamo le condizioni per poter eseguire il codice:
+// Se l'input è diverso da una stringa vuota e
+// Se la stringa inserita dall' utente è pari o dispari e
+// Se il numero inserito è un valore numerico e
+// Se i numeri inseriti sono compresi tra il range di 1 e 5 allora
+// Eseguo il codice...
+if (userOdds !== "" && userOdds === "pari" && userOdds === "dispari" && isNaN(userNum) === false && userNum >= 1 && userNum <= 5) {
 
-// Somma tra il numero utente e quello della CPU
-let sum = random + userNum
-console.log(`Il risultato numerico tra la somma dei due numeri è di:`, sum);
+    //Dichiaro una variabile e richiamo la funzione "randomCpuNum" per la generazione di un numero casuale della CPU
+    let random = randomCpuNum()
 
-// Dichiaro una variabile e richiamo la funzione "sumOdd" per la generazione della stringa del risultato. Questa stringa verrà utilizzata per eseguire i vari output possibili
-const finalResult = sumOdd(sum)
+    // Somma tra il numero utente e quello della CPU
+    let sum = random + userNum
+    console.log(`Il risultato numerico tra la somma dei due numeri è di:`, sum);
 
-// Condizioni per l'output e la generazione del messaggio
-//Se l'utente ha scelto "pari" e il risultato della somma numerica è "pari" allora:
-if (userOdds === "pari" && finalResult === "pari") {
+    // Dichiaro una variabile e richiamo la funzione "sumOdd" per la generazione della stringa del risultato. Questa stringa verrà utilizzata per eseguire i vari output possibili
+    const finalResult = sumOdd(sum)
 
-    //Stampa il messaggio seguente alla console
-    console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai vinto`);
+    // Condizioni per l'output e la generazione del messaggio
+    //Se l'utente ha scelto "pari" e il risultato della somma numerica è "pari" allora:
+    if (userOdds === "pari" && finalResult === "pari") {
 
-    //Altrimenti se l'utente ha scelto "dispari" e il risultato della somma numerica è "dispari" allora:
-} else if (userOdds === "dispari" && finalResult === "dispari") {
+        //Stampa il messaggio seguente alla console
+        console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai vinto`);
 
-    //Stampa il messaggio seguente alla console
-    console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai vinto`);
+        //Altrimenti se l'utente ha scelto "dispari" e il risultato della somma numerica è "dispari" allora:
+    } else if (userOdds === "dispari" && finalResult === "dispari") {
 
-    //Altrimenti se nessuna delle due precedenti condizioni viene rispettata:
+        //Stampa il messaggio seguente alla console
+        console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai vinto`);
+
+        //Altrimenti se nessuna delle due precedenti condizioni viene rispettata:
+    } else {
+
+        //Stampa il messaggio seguente alla console
+        console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai perso`);
+    }
+
+    // ...Altrimenti mostro il seguente messaggio
 } else {
-
-    //Stampa il messaggio seguente alla console
-    console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai perso`);
+    alert("E' stata inserita una parola o un valore diverso dalla richiesta fatta")
 }
+
