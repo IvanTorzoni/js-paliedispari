@@ -18,3 +18,6 @@ let random = randomCpuNum()
 // Somma tra il numero utente e quello della CPU
 let sum = random + userNum
 console.log(`Il risultato numerico tra la somma dei due numeri è di:`, sum);
+
+// Dichiaro una variabile e richiamo la funzione "sumOdd" per la generazione della stringa del risultato. Questa stringa verrà utilizzata per eseguire i vari output possibili
+const finalResult = sumOdd(sum)
