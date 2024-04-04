@@ -46,7 +46,7 @@ if (userRequest !== "") {
     // Creo il ciclo for per confrontare le lettere presenti nei due array
     for (let i = 0; i < wordArray.length; i++) {
         // Se gli elementi dell'array word sono diversi da quelli dell'array reverse
-        if (wordArray[i] === wordReverseArray[i]) {
+        if (wordArray[i] !== wordReverseArray[i]) {
             // porta la variabile flag da false a true
             result = true
         }
@@ -57,11 +57,11 @@ if (userRequest !== "") {
     // se la variabile result è vera
     if (result === true) {
         //genera il messaggio seguente
-        alert("La parola da te inserita è palindroma");
+        alert("la parola da te inserita non è palindroma")
         // altrimenti
     } else {
         //genera il messaggio seguente
-        alert("la parola da te inserita non è palindroma")
+        alert("La parola da te inserita è palindroma");
     }
     // ...Altrimenti genero un messaggio all'utente con la richiesta di inserire una parola
 } else {
