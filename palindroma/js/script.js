@@ -8,9 +8,11 @@ console.log(userRequest);
 
 // Creo le mie variabili di appoggio
 const word = ""
+const wordReverse = ""
 
 // Creo gli array. All'interno vado ad inserire le singole lettere della parola fornita dall'utente
 const wordArray = []
+const wordReverseArray = []
 
 // creo un ciclo for per prendere le singole lettere della parola
 for (let i = 0; i < userRequest.length; i++) {
@@ -22,5 +24,17 @@ for (let i = 0; i < userRequest.length; i++) {
     wordArray.push(word);
     //log alla console
     console.log(wordArray);
+}
+
+// creo un ciclo for per prendere le singole lettere della parola inverite 
+for (let i = userRequest.length - 1; i >= 0; i--) {
+    // Associo le singole lettere alla variabile di appoggio
+    let wordReverse = userRequest[i];
+    //log alla console
+    console.log(wordReverse);
+    //pusho le lettete nell'array
+    wordReverseArray.push(wordReverse);
+    //log alla console
+    console.log(wordReverseArray);
 }
 
