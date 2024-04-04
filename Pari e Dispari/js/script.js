@@ -21,3 +21,23 @@ console.log(`Il risultato numerico tra la somma dei due numeri è di:`, sum);
 
 // Dichiaro una variabile e richiamo la funzione "sumOdd" per la generazione della stringa del risultato. Questa stringa verrà utilizzata per eseguire i vari output possibili
 const finalResult = sumOdd(sum)
+
+// Condizioni per l'output e la generazione del messaggio
+//Se l'utente ha scelto "pari" e il risultato della somma numerica è "pari" allora:
+if (userOdds === "pari" && finalResult === "pari") {
+
+    //Stampa il messaggio seguente alla console
+    console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai vinto`);
+
+    //Altrimenti se l'utente ha scelto "dispari" e il risultato della somma numerica è "dispari" allora:
+} else if (userOdds === "dispari" && finalResult === "dispari") {
+
+    //Stampa il messaggio seguente alla console
+    console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai vinto`);
+
+    //Altrimenti se nessuna delle due precedenti condizioni viene rispettata:
+} else {
+
+    //Stampa il messaggio seguente alla console
+    console.log(`La tua scelta iniziale è stata : ${userOdds}. Il risultato finale è : ${finalResult}. Hai perso`);
+}
