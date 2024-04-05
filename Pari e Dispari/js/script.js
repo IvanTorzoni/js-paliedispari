@@ -5,7 +5,7 @@
 // Dichiariamo chi ha vinto.
 
 // Richiesta all' utente di scegliere pari o dispari
-const userOdds = prompt("dimmi pari o dispari");
+const userOdds = prompt("dimmi pari o dispari").toLowerCase();
 console.log(`La tua scelta tra pari e dispari è:`, userOdds);
 
 // Richiesta all' utente di scegliere un numero compreso te 1 e 5
